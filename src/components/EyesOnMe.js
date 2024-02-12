@@ -1,23 +1,22 @@
 import React from 'react';
 
-class EyesOnMe extends React.Component {
-  handleFocus = () => {
+function EyesOnMe() {
+  function handleFocus(){
     console.log('Good!');
   };
 
-  handleBlur = () => {
+  function handleBlur(){
     console.log('Hey! Eyes on me!');
   };
 
-  render() {
     return (
       <div>
-        <button onFocus={this.handleFocus} onBlur={this.handleBlur}>
+        <button onFocus={handleFocus} onBlur={handleBlur}>
           Eyes on me
         </button>
       </div>
     );
-  }
+  
 }
 
 export default EyesOnMe;
